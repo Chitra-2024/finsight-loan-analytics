@@ -1,11 +1,14 @@
 import os
 import mysql.connector
 import subprocess
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DB_SETTINGS = {
-    "host": "localhost",
-    "user": "root",
-    "password": "" 
+    "host": os.getenv("DB_HOST", "localhost"),
+    "user": os.getenv("DB_USER", "root"),
+    "password": os.getenv("DB_PASSWORD", "password") 
 }
 
 def execute_sql_file(cursor, file_path):
