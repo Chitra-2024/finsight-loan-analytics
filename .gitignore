@@ -1,0 +1,10 @@
+# Python structural caches
+__pycache__/
+*.pyc
+
+# Local environment configuration scripts
+.env
+
+# Operating system system artifacts
+.DS_Store
+Thumbs.db
